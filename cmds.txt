@@ -1,0 +1,94 @@
+    1  cd project-ml-microservice-kubernetes/
+    2  bash resize.sh 100
+    3  python
+    4  clear
+    5  python3 -m venv ~/.devops
+    6  source ~/.devops/bin/activate
+    7  make install
+    8  make lint
+    9  clear
+   10  make install
+   11  make lint
+   12  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64.deb
+   13  sudo apt install ./minikube_latest_amd64.deb -y
+   14  sudo install ./minikube_latest_amd64.deb -y
+   15  sudo install ./minikube_latest_amd64.deb /usr/local/bin/minikube
+   16  minikube start
+   17  rm minikube*
+   18  curl -LO https://storage.googleapis.com/minikube/releases/latest/minikube_latest_amd64
+   19  sudo install minikube_latest_amd64 /usr/local/bin/minikube
+   20  minikube --version
+   21  rm minikube*
+   22  curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/minikube-linux-amd64   && chmod +x minikube
+   23  sudo cp minikube /usr/local/bin && rm minikube
+   24  minikube version
+   25  minikube start
+   26  kubectl 
+   27  curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+   28  sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+   29  chmod +x kubectl
+   30  mkdir -p ~/.local/bin
+   31  ls ~/.local/bin
+   32  kubectl version --client
+   33  sudo cp kubectl /usr/local/bin && rm kubectl 
+   34  kubectl -- get pods -A
+   35  clear
+   36  docker version
+   37  make lint
+   38  clear
+   39  cd project-ml-microservice-kubernetes/
+   40  make setup
+   41  source ~/.devops/bin/activate
+   42  bash make_prediction.sh 
+   43  bash run_docker.sh 
+   44  clear
+   45  bash run_docker.sh 
+   46  make lint
+   47  touch docker_out.txt
+   48  bash make_prediction.sh 
+   49  clear
+   50  cd project-ml-microservice-kubernetes/
+   51  bash run_docker.sh 
+   52  make lint
+   53  cd project-ml-microservice-kubernetes/
+   54  bash make_prediction.sh 
+   55  make lint
+   56  make setup
+   57  source ~/.devops/bin/activate
+   58  make lint
+   59  clear
+   60  make lint
+   61  clear
+   62  bash run_docker.sh 
+   63  bash upload_docker.sh 
+   64  bash run_docker.sh 
+   65  clear
+   66  bash run_docker.sh 
+   67  bash upload_docker.sh 
+   68  clear
+   69  bash make_prediction.sh 
+   70  touch .circleci/config.yml
+   71  mkdir -p .circleci/config.yml
+   72  ls -al
+   73  clear
+   74  git init
+   75  git branch -M main
+   76  git commit -m "first commit"
+   77  git add .
+   78  git commit -m "first commit"
+   79  git remote add origin git@github.com:nwabudo/udacity-project-4.git
+   80  ssh-keygen -t ed25519 -C "nwabudoemmanuel@gmail.com"
+   81  eval "$(ssh-agent -s)"
+   82  ssh-add ~/.ssh/id_ed25519
+   83  cat ~/.ssh/id_ed25519.pub
+   84  git push -u origin main
+   85  clear
+   86  git add 
+   87  git add .
+   88  git commit -m "updated config.yml file"
+   89  git add .
+   90  git commit -m "added status badge to readme file"
+   91  git push
+   92  minikube delete
+   93  minikube stop
+   94  history > cmds.txt
