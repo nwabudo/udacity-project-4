@@ -1,0 +1,20 @@
+(.devops) voclabs:~/environment/project-ml-microservice-kubernetes $ bash run_kubernetes.sh 
+pod/udacityml created
+NAME        READY   STATUS              RESTARTS   AGE
+udacityml   0/1     ContainerCreating   0          0s
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) voclabs:~/environment/project-ml-microservice-kubernetes $ bash run_kubernetes.sh 
+Error from server (AlreadyExists): pods "udacityml" already exists
+NAME        READY   STATUS              RESTARTS   AGE
+udacityml   0/1     ContainerCreating   0          20s
+error: unable to forward port because pod is not running. Current status=Pending
+(.devops) voclabs:~/environment/project-ml-microservice-kubernetes $ kubectl get pods
+NAME        READY   STATUS    RESTARTS   AGE
+udacityml   1/1     Running   0          54s
+(.devops) voclabs:~/environment/project-ml-microservice-kubernetes $ bash run_kubernetes.sh 
+Error from server (AlreadyExists): pods "udacityml" already exists
+NAME        READY   STATUS    RESTARTS   AGE
+udacityml   1/1     Running   0          77s
+Forwarding from 127.0.0.1:8000 -> 80
+Forwarding from [::1]:8000 -> 80
+Handling connection for 8000
